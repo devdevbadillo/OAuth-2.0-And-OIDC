@@ -1,5 +1,11 @@
 package com.outh2.authorization.service;
 
 public interface ISpotifyClientService {
-    String getAccessToken();
+
+    String getAccessTokenByClientCredentialsFlow();
+
+    String getAuthorizationUrlWithPKCE();
+
+    String exchangeCodeForTokenPKCE(String code, String state);
+
 }
